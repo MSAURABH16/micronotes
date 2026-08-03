@@ -59,13 +59,13 @@ function App() {
   };
  
   return (
-    <div>
+    <div className="App">
       <h1>MicroNotes</h1>
       <input value={title} onChange={(e) => setTitle(e.target.value)} placeholder="Title" />
       <input value={content} onChange={(e) => setContent(e.target.value)} placeholder="Content" />
       <button onClick={handleAddNote}>Add Note</button>
  
-      <ul>
+      <ul className="notes">
         {notes.map((note) => (
           <li key={note.id}>{note.title}: {note.content}</li>
         ))}
